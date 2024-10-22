@@ -1,3 +1,4 @@
+import ProductList from "@/components/ProductList";
 import Image from "next/image";
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
         <div className="font-normal text-sm">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </div>
-        <div className="flex justify-center items-center mt-10 gap-5">
+        <div className="flex justify-center items-center mt-10 gap-5 flex-wrap">
           <div className="flex flex-col gap-5 justify-center items-center flex-1 overflow-hidden rounded-md text-xl">
             <Image
               src="/image/dining.png"
@@ -48,6 +49,12 @@ export default function Home() {
             Bedroom
           </div>
         </div>
+      </div>
+
+      <div className="flex flex-col mt-10 justify-center items-center gap-10">
+        <div className="font-extrabold text-2xl">Our Products</div>
+        <ProductList />
+        <button className="btn btn-outline btn-warning mt-5">Show More</button>
       </div>
     </div>
   );
