@@ -1,8 +1,11 @@
+import Image from "next/image";
 import React from "react";
 
 const Navbar = () => {
+  const menuItem: string[] = ["Home", "Shop", "About", "Contact"];
+
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-white">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -25,52 +28,74 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
+            {menuItem.map((item, key) => {
+              return (
+                <li key={key}>
+                  <a>{item}</a>
                 </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+              );
+            })}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="btn btn-ghost text-xl font-bold">
+          <Image
+            src="/image/Logo.png"
+            alt="Next.js logo"
+            width={50}
+            height={32}
+            priority
+          />
+          Furniro
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
+          {menuItem.map((item, key) => {
+            return (
+              <li key={key} className="font-bold">
+                <a>{item}</a>
+              </li>
+            );
+          })}
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end gap-10">
+        <a>
+          <Image
+            src="/icon/account.png"
+            alt="Next.js account"
+            width={22}
+            height={22}
+            priority
+          />
+        </a>
+        <a>
+          <Image
+            src="/icon/search.png"
+            alt="Next.js search"
+            width={22}
+            height={22}
+            priority
+          />
+        </a>
+        <a>
+          <Image
+            src="/icon/favorite.png"
+            alt="Next.js favorite"
+            width={22}
+            height={22}
+            priority
+          />
+        </a>
+        <a>
+          <Image
+            src="/icon/Vector.png"
+            alt="Next.js Vector"
+            width={22}
+            height={22}
+            priority
+          />
+        </a>
       </div>
     </div>
   );
