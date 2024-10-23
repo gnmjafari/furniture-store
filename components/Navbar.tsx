@@ -1,11 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import { menuItem } from "./data";
 
 const Navbar = () => {
-  const menuItem: string[] = ["Home", "Shop", "About", "Contact"];
-
   return (
-    <div className="navbar relative bg-white">
+    <div className="navbar fixed z-50 bg-white">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
