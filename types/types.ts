@@ -8,4 +8,5 @@ export type Product = {
   discount: boolean;
   discountPercentage: number;
   new: boolean;
+  category: string;
 };

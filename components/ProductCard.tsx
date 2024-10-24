@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
-
 import { Product } from "../types/types";
+import Image from "next/image";
 
 type ProductCardProps = {
   item: Product;
@@ -31,7 +31,9 @@ const ProductCard: FunctionComponent<ProductCardProps> = ({ item }) => {
       )}
       <div className="card card-compact w-64 shadow-xl">
         <figure>
-          <img src={item.image} alt={item.name} />
+          <div className="w-[285] h-[301]">
+            <Image src={item.image} alt={item.name} width={285} height={301} />
+          </div>
         </figure>
         <div className="card-body">
           <h2 className="card-title">{item.name}</h2>
