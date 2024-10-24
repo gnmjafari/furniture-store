@@ -31,7 +31,9 @@ const Navbar = () => {
             {menuItem.map((item, key) => {
               return (
                 <li key={key}>
-                  <Link href={`/${item.toString()}`}>{item.toUpperCase()}</Link>
+                  <Link href={`/${item !== "home" && item.toString()}`}>
+                    {item.toUpperCase()}
+                  </Link>
                 </li>
               );
             })}
@@ -53,7 +55,9 @@ const Navbar = () => {
           {menuItem.map((item, key) => {
             return (
               <li key={key} className="font-bold">
-                <Link href={`/${item.toString()}`}>{item.toUpperCase()}</Link>
+                <Link href={`/${item !== "home" ? item.toString() : ""}`}>
+                  {item.toUpperCase()}
+                </Link>
               </li>
             );
           })}
