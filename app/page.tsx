@@ -1,7 +1,35 @@
+"use client";
 import ProductList from "@/components/ProductList";
+import Slider from "@/components/Slider";
+import { Product } from "@/types/types";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [activeSlide, setActiveSlide] = useState<Product>();
+
+  const getProducts = async () => {
+    try {
+      const productsRes = await fetch("/api");
+      const data = await productsRes.json();
+      if (data) {
+        const firstSlide = data.filter(
+          (item: Product) => item.category == "room"
+        )[0];
+        setProducts(data);
+
+        setActiveSlide(firstSlide);
+      }
+    } catch (error) {
+      console.error("Failed to fetch products:", error);
+    }
+  };
+
+  useEffect(() => {
+    getProducts();
+  }, []);
+  console.log("activeSlide", activeSlide);
   return (
     <div className="flex flex-col gap-10 justify-center items-center">
       <div
@@ -53,8 +81,22 @@ export default function Home() {
 
       <div className="flex flex-col mt-10 justify-center items-center gap-10">
         <div className="font-extrabold text-2xl">Our Products</div>
-        <ProductList />
+        <ProductList products={products} />
         <button className="btn btn-outline btn-warning mt-5">Show More</button>
+      </div>
+
+      <div className="card p-5 bg-[#FCF8F3] w-full shadow-xl items-center justify-center flex-row flex-wrap">
+        <div className="card-body w-1/3">
+          <h2 className="card-title">50+ Beautiful rooms inspiration</h2>
+          <p>
+            Our designer already made a lot of beautiful prototipe of rooms that
+            inspire you
+          </p>
+          <div className="card-actions justify-start">
+            <button className="btn btn-warning">Explore More</button>
+          </div>
+        </div>
+        <Slider images={products.filter((item) => item.category == "room")} />
       </div>
     </div>
   );
