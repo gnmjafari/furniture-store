@@ -98,6 +98,137 @@ export default function Home() {
         </div>
         <Slider images={products.filter((item) => item.category == "room")} />
       </div>
+
+      <div className="flex flex-col mt-10 justify-center items-center gap-10">
+        <div className="flex flex-col gap-2 items-center justify-center">
+          <div className="font-medium text-lg">Share your setup with</div>
+          <div className="font-extrabold text-2xl">#FuniroFurniture</div>
+        </div>
+
+        <div className="w-full hidden lg:flex">
+          <div className="grid lg:grid-cols-5 gap-5">
+            <div className="col-span-2 flex justify-center items-center overflow-hidden">
+              <div className="flex flex-col gap-2">
+                <div className="flex items-end gap-2">
+                  <Image
+                    src="/products/Rectangle 36.png"
+                    alt="Rectangle 36"
+                    width={100}
+                    height={382}
+                    priority
+                    style={{
+                      width: "100px",
+                      height: "382px",
+                    }}
+                  />
+
+                  <Image
+                    src="/products/Rectangle 38.png"
+                    alt="Rectangle 38"
+                    width={451}
+                    height={312}
+                    style={{
+                      width: "451px",
+                      height: "312px",
+                    }}
+                    priority
+                  />
+                </div>
+                <div className="flex items-start gap-2">
+                  <Image
+                    src="/products/Rectangle 37.png"
+                    alt="Rectangle 37"
+                    width={200}
+                    height={323}
+                    priority
+                    style={{
+                      width: "200px",
+                      height: "323px",
+                    }}
+                  />
+
+                  <Image
+                    src="/products/Rectangle 39.png"
+                    alt="Rectangle 39"
+                    width={351}
+                    height={242}
+                    style={{
+                      width: "351px",
+                      height: "242px",
+                    }}
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="col-span-1 flex justify-center items-center overflow-hidden">
+              <Image
+                src="/products/Rectangle 40.png"
+                alt="Rectangle 40"
+                width={295}
+                height={392}
+                style={{
+                  width: "100%",
+                  height: "392px",
+                }}
+                priority
+              />
+            </div>
+            <div className="col-span-2 flex justify-center items-center overflow-hidden">
+              <div className="flex flex-col gap-2">
+                <div className="flex items-end gap-2">
+                  <Image
+                    src="/products/Rectangle 43.png"
+                    alt="Rectangle 43"
+                    width={290}
+                    height={348}
+                    style={{
+                      width: "290px",
+                      height: "348px",
+                    }}
+                    priority
+                  />
+                  <Image
+                    src="/products/Rectangle 45.png"
+                    alt="Rectangle 45"
+                    width={200}
+                    height={433}
+                    style={{
+                      width: "220px",
+                      height: "433px",
+                    }}
+                    priority
+                  />
+                </div>
+                <div className="flex items-start gap-2">
+                  <Image
+                    src="/products/Rectangle 41.png"
+                    alt="Rectangle 41"
+                    width={178}
+                    height={242}
+                    style={{
+                      width: "178px",
+                      height: "242px",
+                    }}
+                    priority
+                  />
+                  <Image
+                    src="/products/Rectangle 44.png"
+                    alt="Rectangle 44"
+                    width={262}
+                    height={196}
+                    style={{
+                      width: "262px",
+                      height: "196px",
+                    }}
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
