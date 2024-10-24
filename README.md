@@ -1,4 +1,6 @@
-[Live demo](https://furniture-store-theta-two.vercel.app/) 
+## Furniture store based on [Figma](https://www.figma.com/design/2hehowUjuV8cspZeIhFnlz/eCommerce-Website-%7C-Web-Page-Design-%7C-UI-KIT-%7C-Interior-Landing-Page-(Community)?node-id=117-336&node-type=frame&t=NOsePgs0s6q3t90U-0) and [Live demo](https://furniture-store-theta-two.vercel.app/)
+
+ 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
