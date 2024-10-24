@@ -7,19 +7,13 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [products, setProducts] = useState<Product[]>([]);
-  const [activeSlide, setActiveSlide] = useState<Product>();
 
   const getProducts = async () => {
     try {
       const productsRes = await fetch("/api");
       const data = await productsRes.json();
       if (data) {
-        const firstSlide = data.filter(
-          (item: Product) => item.category == "room"
-        )[0];
         setProducts(data);
-
-        setActiveSlide(firstSlide);
       }
     } catch (error) {
       console.error("Failed to fetch products:", error);
@@ -29,7 +23,7 @@ export default function Home() {
   useEffect(() => {
     getProducts();
   }, []);
-  console.log("activeSlide", activeSlide);
+
   return (
     <div className="flex flex-col gap-10 justify-center items-center">
       <div
