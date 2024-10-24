@@ -58,40 +58,44 @@ const Navbar = () => {
           })}
         </ul>
       </div>
-      <div className="navbar-end gap-10">
-        <a>
+      <div className="navbar-end mr-10 gap-10">
+        <a className="cursor-pointer">
           <Image
             src="/icon/account.png"
             alt="Next.js account"
-            width={22}
-            height={22}
+            width={20}
+            height={20}
+            style={{ width: "20px", height: "20px" }}
             priority
           />
         </a>
-        <a>
+        <a className="cursor-pointer">
           <Image
             src="/icon/search.png"
             alt="Next.js search"
-            width={22}
-            height={22}
+            width={20}
+            height={20}
+            style={{ width: "20px", height: "20px" }}
             priority
           />
         </a>
-        <a>
+        <a className="cursor-pointer">
           <Image
             src="/icon/favorite.png"
             alt="Next.js favorite"
-            width={22}
-            height={22}
+            width={20}
+            height={20}
+            style={{ width: "20px", height: "20px" }}
             priority
           />
         </a>
-        <a>
+        <a className="cursor-pointer">
           <Image
             src="/icon/Vector.png"
             alt="Next.js Vector"
-            width={22}
-            height={22}
+            width={20}
+            height={20}
+            style={{ width: "20px", height: "20px" }}
             priority
           />
         </a>
