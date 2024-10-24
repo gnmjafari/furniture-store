@@ -52,11 +52,11 @@ const ProductCard: FunctionComponent<ProductCardProps> = ({ item }) => {
         <div className="absolute invisible p-2 flex-col gap-3  group-hover/product:visible left-0 top-0 bottom-0 right-0  bg-[#3a3a3ab2] flex justify-center items-center">
           <button className="btn  btn-outline btn-warning">Add to cart</button>
           <div className="flex items-center justify-between gap-1">
-            <div className="badge badge-sm badge-ghost gap-1">
+            <button className="btn btn-xs text-white btn-ghost gap-1">
               <Image src="/icon/share.png" alt="share" width={10} height={10} />
               Share
-            </div>
-            <div className="badge badge-sm badge-ghost gap-1">
+            </button>
+            <button className="btn btn-xs text-white btn-ghost gap-1">
               <Image
                 src="/icon/Compare.png"
                 alt="Compare"
@@ -64,11 +64,11 @@ const ProductCard: FunctionComponent<ProductCardProps> = ({ item }) => {
                 height={12}
               />
               Compare
-            </div>
-            <div className="badge badge-sm badge-ghost gap-1">
+            </button>{" "}
+            <button className="btn btn-xs text-white btn-ghost gap-1">
               <Image src="/icon/Heart.png" alt="Heart" width={12} height={12} />
               Like
-            </div>
+            </button>
           </div>
         </div>
       </div>
