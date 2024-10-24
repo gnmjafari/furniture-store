@@ -1,1 +1,1 @@
-export const menuItem: string[] = ["Home", "Shop", "About", "Contact"];
+export const menuItem: string[] = ["home", "shop", "about", "contact"];

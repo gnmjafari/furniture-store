@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { menuItem } from "./data";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -30,7 +31,7 @@ const Navbar = () => {
             {menuItem.map((item, key) => {
               return (
                 <li key={key}>
-                  <a>{item}</a>
+                  <Link href={`/${item.toString()}`}>{item.toUpperCase()}</Link>
                 </li>
               );
             })}
@@ -52,7 +53,7 @@ const Navbar = () => {
           {menuItem.map((item, key) => {
             return (
               <li key={key} className="font-bold">
-                <a>{item}</a>
+                <Link href={`/${item.toString()}`}>{item.toUpperCase()}</Link>
               </li>
             );
           })}
