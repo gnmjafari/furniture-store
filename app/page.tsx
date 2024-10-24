@@ -1,35 +1,19 @@
 "use client";
+import ProductCardLoading from "@/components/ProductCardLoading";
 import ProductList from "@/components/ProductList";
 import Slider from "@/components/Slider";
+import { fetcher } from "@/components/utils";
 import { Product } from "@/types/types";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import useSWR from "swr";
 
 export default function Home() {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [activeSlide, setActiveSlide] = useState<Product>();
+  const { data: products, isLoading } = useSWR("/api", fetcher);
+  console.log("isLoading", isLoading);
+  console.log("products", products);
 
-  const getProducts = async () => {
-    try {
-      const productsRes = await fetch("/api");
-      const data = await productsRes.json();
-      if (data) {
-        const firstSlide = data.filter(
-          (item: Product) => item.category == "room"
-        )[0];
-        setProducts(data);
+  // const [products, setProducts] = useState<Product[]>([]);
 
-        setActiveSlide(firstSlide);
-      }
-    } catch (error) {
-      console.error("Failed to fetch products:", error);
-    }
-  };
-
-  useEffect(() => {
-    getProducts();
-  }, []);
-  console.log("activeSlide", activeSlide);
   return (
     <div className="flex flex-col gap-10 justify-center items-center">
       <div
@@ -81,7 +65,16 @@ export default function Home() {
 
       <div className="flex flex-col mt-10 justify-center items-center gap-10">
         <div className="font-extrabold text-2xl">Our Products</div>
-        <ProductList products={products} />
+        {isLoading || !products ? (
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-20">
+            <ProductCardLoading />
+            <ProductCardLoading />
+            <ProductCardLoading />
+            <ProductCardLoading />
+          </div>
+        ) : (
+          <ProductList products={products} />
+        )}
         <button className="btn btn-outline btn-warning mt-5">Show More</button>
       </div>
 
@@ -96,7 +89,15 @@ export default function Home() {
             <button className="btn btn-warning">Explore More</button>
           </div>
         </div>
-        <Slider images={products.filter((item) => item.category == "room")} />
+        {isLoading ? (
+          <div className="grid grid-cols-1  gap-20 relative">
+            <ProductCardLoading />
+          </div>
+        ) : (
+          <Slider
+            images={products.filter((item: Product) => item.category == "room")}
+          />
+        )}
       </div>
 
       <div className="flex flex-col mt-10 justify-center items-center gap-10">
