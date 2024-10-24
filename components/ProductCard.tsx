@@ -31,7 +31,7 @@ const ProductCard: FunctionComponent<ProductCardProps> = ({ item }) => {
       )}
       <div className="card card-compact w-64 shadow-xl">
         <figure>
-          <div className="w-[285] h-[301]">
+          <div className="max-w-[285] max-h-[301]">
             <Image src={item.image} alt={item.name} width={285} height={301} />
           </div>
         </figure>
