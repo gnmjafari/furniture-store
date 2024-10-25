@@ -8,11 +8,7 @@ import Image from "next/image";
 import useSWR from "swr";
 
 export default function Home() {
-  const { data: products, isLoading } = useSWR("/api", fetcher);
-  console.log("isLoading", isLoading);
-  console.log("products", products);
-
-  // const [products, setProducts] = useState<Product[]>([]);
+  const { data, isLoading } = useSWR("/api", fetcher);
 
   return (
     <div className="flex flex-col gap-10 justify-center items-center">
@@ -65,7 +61,7 @@ export default function Home() {
 
       <div className="flex flex-col mt-10 justify-center items-center gap-10">
         <div className="font-extrabold text-2xl">Our Products</div>
-        {isLoading || !products ? (
+        {isLoading || !data?.products ? (
           <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-20">
             <ProductCardLoading />
             <ProductCardLoading />
@@ -73,7 +69,7 @@ export default function Home() {
             <ProductCardLoading />
           </div>
         ) : (
-          <ProductList products={products} />
+          <ProductList products={data?.products} />
         )}
         <button className="btn btn-outline btn-warning mt-5">Show More</button>
       </div>
@@ -95,7 +91,9 @@ export default function Home() {
           </div>
         ) : (
           <Slider
-            images={products.filter((item: Product) => item.category == "room")}
+            images={data?.products.filter(
+              (item: Product) => item.category == "room"
+            )}
           />
         )}
       </div>
