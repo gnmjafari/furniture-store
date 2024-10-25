@@ -269,4 +269,3 @@ export const products: Product[] = [
 ];
 
 export const menuItem: string[] = ["home", "shop", "about", "contact"];
-

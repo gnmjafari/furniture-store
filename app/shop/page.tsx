@@ -16,12 +16,12 @@ const Shop: NextPage = () => {
   const [shortBy, setShortBy] = useState<string>("New");
   const [howDisplay, setHowDisplay] = useState<string>("group");
 
-  const { data: products, isLoading } = useSWR(
+  const { data, isLoading } = useSWR(
     `/api/?page=${pagination}&show=${show}&shortBy=${shortBy}`,
     fetcher
   );
 
-  console.log("products", products);
+  console.log("products", data);
   console.log("isLoading", isLoading);
 
   return (
@@ -128,7 +128,7 @@ const Shop: NextPage = () => {
           </div>
         </div>
       </div>
-      {isLoading || !products ? (
+      {isLoading || !data?.products ? (
         <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-20 p-10 ">
           <ProductCardLoading />
           <ProductCardLoading />
@@ -136,7 +136,7 @@ const Shop: NextPage = () => {
           <ProductCardLoading />
         </div>
       ) : (
-        <ProductList products={products} />
+        <ProductList products={data?.products} />
       )}
 
       <div className="flex justify-center items-center mt-10">
@@ -152,12 +152,13 @@ const Shop: NextPage = () => {
             </button>
           )}
           <button className="join-item btn btn-warning">
-            Page {pagination} of {Math.round(products?.length / Number(show))}
+            Page {pagination} of{" "}
+            {Math.ceil(data?.productsNumber / Number(show))}
           </button>
-          {pagination != Math.round(products?.length / Number(show)) && (
+          {pagination != Math.ceil(data?.productsNumber / Number(show)) && (
             <button
               className={`join-item btn btn-warning btn-outline ${
-                pagination >= Math.round(products?.length / Number(show)) &&
+                pagination >= Math.ceil(data?.productsNumber / Number(show)) &&
                 "btn-disabled"
               }`}
               onClick={() => setPagination(pagination + 1)}
@@ -166,47 +167,6 @@ const Shop: NextPage = () => {
             </button>
           )}
         </div>
-        {/* <div className="join">
-          {pagination != 1 && (
-            <button
-              className={`join-item btn ${pagination <= 1 && "btn-disabled"}`}
-              onClick={() => setPagination(pagination - 1)}
-            >
-              «
-            </button>
-          )}
-          {pagination != Math.round(products?.length / Number(show)) && (
-            <>
-              <button className="join-item btn btn-active">
-                Page {pagination}
-              </button>
-              <button className="join-item btn">...</button>
-            </>
-          )}
-          <button
-            className={`join-item btn ${
-              pagination == Math.round(products?.length / Number(show)) &&
-              "btn-active"
-            }`}
-            onClick={() =>
-              setPagination(Math.round(products?.length / Number(show)))
-            }
-          >
-            Page {Math.round(products?.length / Number(show))}
-          </button>
-
-          {pagination != Math.round(products?.length / Number(show)) && (
-            <button
-              className={`join-item btn ${
-                pagination >= Math.round(products?.length / Number(show)) &&
-                "btn-disabled"
-              }`}
-              onClick={() => setPagination(pagination + 1)}
-            >
-              »
-            </button>
-          )}
-        </div> */}
       </div>
     </>
   );
