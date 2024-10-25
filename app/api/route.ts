@@ -27,13 +27,29 @@ export function GET(request: NextRequest) {
     productsCopy = _.sortBy(productsCopy, ["discount"]).reverse();
   }
 
-  productsCopy = productsCopy.slice(
-    Number(show) * (Number(page) - 1),
-    Number(show) * (Number(page) - 1) + Number(show)
-  );
+  const maxPage = Math.ceil(products.length / Number(show));
 
-  return Response.json(
-    { products: productsCopy, productsNumber: products.length },
-    { status: 200 }
-  );
+  if (Number(page) > maxPage) {
+    productsCopy = productsCopy.slice(
+      Number(show) * (Number(maxPage) - 1),
+      Number(show) * (Number(maxPage) - 1) + Number(show)
+    );
+    return Response.json(
+      {
+        products: productsCopy,
+        productsNumber: products.length,
+        currentPage: maxPage,
+      },
+      { status: 200 }
+    );
+  } else {
+    productsCopy = productsCopy.slice(
+      Number(show) * (Number(page) - 1),
+      Number(show) * (Number(page) - 1) + Number(show)
+    );
+    return Response.json(
+      { products: productsCopy, productsNumber: products.length },
+      { status: 200 }
+    );
+  }
 }

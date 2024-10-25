@@ -148,7 +148,7 @@ export const products: Product[] = [
   {
     id: 13,
     name: "Respira 35",
-    image: "/products/Rectangle 35.png",
+    image: "/products/Rectangle 41.png",
     description: "Inner Peace",
     price: 3200000,
     favorite: false,
@@ -160,7 +160,7 @@ export const products: Product[] = [
   {
     id: 14,
     name: "Respira 36",
-    image: "/products/Rectangle 36.png",
+    image: "/products/Rectangle 40.png",
     description: "Inner Peace",
     price: 4600000,
     favorite: false,

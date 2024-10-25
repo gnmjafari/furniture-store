@@ -4,7 +4,7 @@ import ProductList from "@/components/ProductList";
 import { fetcher } from "@/components/utils";
 import { NextPage } from "next";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useSWR from "swr";
 
 const shortOption: string[] = ["New", "Lowest price", "Discounted"];
@@ -23,6 +23,12 @@ const Shop: NextPage = () => {
 
   console.log("products", data);
   console.log("isLoading", isLoading);
+
+  useEffect(() => {
+    if (data?.currentPage) {
+      setPagination(Number(data.currentPage));
+    }
+  }, [data]);
 
   return (
     <>
@@ -151,10 +157,16 @@ const Shop: NextPage = () => {
               «
             </button>
           )}
-          <button className="join-item btn btn-warning">
-            Page {pagination} of{" "}
-            {Math.ceil(data?.productsNumber / Number(show))}
-          </button>
+          {isLoading ? (
+            <button className="join-item btn btn-square btn-warning">
+              <span className="loading loading-spinner"></span>
+            </button>
+          ) : (
+            <button className="join-item btn btn-warning">
+              Page {pagination} of{" "}
+              {Math.ceil(data?.productsNumber / Number(show))}
+            </button>
+          )}
           {pagination != Math.ceil(data?.productsNumber / Number(show)) && (
             <button
               className={`join-item btn btn-warning btn-outline ${

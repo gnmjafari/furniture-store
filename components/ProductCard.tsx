@@ -31,8 +31,15 @@ const ProductCard: FunctionComponent<ProductCardProps> = ({ item }) => {
       )}
       <div className="card relative cursor-pointer card-compact w-64 shadow-xl group/product overflow-hidden">
         <figure>
-          <div className="max-w-[285px] max-h-[301px]">
-            <Image src={item.image} alt={item.name} width={285} height={301} />
+          <div className="relative max-w-[285px] max-h-[301px] min-w-[285px] min-h-[301px] ">
+            <Image
+              className="object-cover"
+              src={item.image}
+              alt={item.name}
+              layout="fill"
+              // width={285}
+              // height={301}
+            />
           </div>
         </figure>
         <div className="card-body">
