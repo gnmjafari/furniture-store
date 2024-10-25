@@ -1,7 +1,5 @@
 import { Product } from "@/types/types";
 
-export const menuItem: string[] = ["Home", "Shop", "About", "Contact"];
-
 export const products: Product[] = [
   {
     id: 1,
@@ -269,3 +267,6 @@ export const products: Product[] = [
     category: "sofas and armchairs",
   },
 ];
+
+export const menuItem: string[] = ["home", "shop", "about", "contact"];
+
