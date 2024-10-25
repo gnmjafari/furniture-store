@@ -29,7 +29,7 @@ export function GET(request: NextRequest) {
 
   const maxPage = Math.ceil(products.length / Number(show));
 
-  if (Number(page) > maxPage) {
+  if (page && show && shortBy && Number(page) > maxPage) {
     productsCopy = productsCopy.slice(
       Number(show) * (Number(maxPage) - 1),
       Number(show) * (Number(maxPage) - 1) + Number(show)
@@ -42,7 +42,7 @@ export function GET(request: NextRequest) {
       },
       { status: 200 }
     );
-  } else {
+  } else if (page && show && shortBy) {
     productsCopy = productsCopy.slice(
       Number(show) * (Number(page) - 1),
       Number(show) * (Number(page) - 1) + Number(show)
@@ -51,5 +51,7 @@ export function GET(request: NextRequest) {
       { products: productsCopy, productsNumber: products.length },
       { status: 200 }
     );
+  } else {
+    return Response.json({ products: products }, { status: 200 });
   }
 }
