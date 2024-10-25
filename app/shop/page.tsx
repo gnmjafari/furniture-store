@@ -4,13 +4,31 @@ import ProductList from "@/components/ProductList";
 import { fetcher } from "@/components/utils";
 import { NextPage } from "next";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useSWR from "swr";
 
+const shortOption: string[] = ["New", "Lowest price", "Discounted"];
+const showOption: string[] = ["8", "16", "24"];
+
 const Shop: NextPage = () => {
-  const { data: products, isLoading } = useSWR("/api", fetcher);
-  console.log("products", products);
+  const [pagination, setPagination] = useState<number>(1);
+  const [show, setShow] = useState<string>("8");
+  const [shortBy, setShortBy] = useState<string>("New");
+  const [howDisplay, setHowDisplay] = useState<string>("group");
+
+  const { data, isLoading } = useSWR(
+    `/api/?page=${pagination}&show=${show}&shortBy=${shortBy}`,
+    fetcher
+  );
+
+  console.log("products", data);
   console.log("isLoading", isLoading);
+
+  useEffect(() => {
+    if (data?.currentPage) {
+      setPagination(Number(data.currentPage));
+    }
+  }, [data]);
 
   return (
     <>
@@ -50,38 +68,73 @@ const Shop: NextPage = () => {
             />
             <span>Filter</span>
           </div>
-          <div className="flex gap-5 justify-start items-center">
-            <Image
-              src="/icon/ci_grid-big-round.png"
-              alt="ci_grid-big-round"
-              width={20}
-              height={20}
-              priority
-              className="cursor-pointer"
-              style={{
-                width: "20px",
-                height: "20px",
-              }}
-            />
-            <Image
-              src="/icon/bi_view-list.png"
-              alt="bi_view-list"
-              className="cursor-pointer"
-              width={15}
-              height={15}
-              priority
-              style={{
-                width: "15px",
-                height: "15px",
-              }}
-            />
+          <div className="flex gap-1 justify-start items-center">
+            <button
+              className={`btn btn-ghost ${
+                howDisplay == "Group" && "btn-active"
+              }`}
+            >
+              <Image
+                onClick={() => setHowDisplay("Group")}
+                src="/icon/ci_grid-big-round.png"
+                alt="ci_grid-big-round"
+                width={20}
+                height={20}
+                priority
+                className="cursor-pointer"
+                style={{
+                  width: "20px",
+                  height: "20px",
+                }}
+              />
+            </button>
+            <button className="btn btn-ghost">
+              <Image
+                onClick={() => setHowDisplay("Single")}
+                src="/icon/bi_view-list.png"
+                alt="bi_view-list"
+                className="cursor-pointer"
+                width={15}
+                height={15}
+                priority
+                style={{
+                  width: "15px",
+                  height: "15px",
+                }}
+              />
+            </button>
           </div>
           <div className="divider lg:divider-horizontal" />
           <div>Showing 1–16 of products results</div>
         </div>
-        <div className="bg-slate-950"></div>
+        <div className="flex justify-center items-center gap-10">
+          <div className="flex justify-start items-center gap-3 ">
+            <div className="text-lg">Show</div>
+            <select
+              value={show}
+              onChange={(e) => setShow(e.target.value)}
+              className="select select-bordered w-full max-w-xs"
+            >
+              {showOption.map((item, key) => {
+                return <option key={key}>{item}</option>;
+              })}
+            </select>
+          </div>
+          <div className="flex justify-start items-center gap-3">
+            <div className="text-lg text-nowrap">Short by</div>
+            <select
+              value={shortBy}
+              onChange={(e) => setShortBy(e.target.value)}
+              className="select select-bordered w-full max-w-xs"
+            >
+              {shortOption.map((item, key) => {
+                return <option key={key}>{item}</option>;
+              })}
+            </select>
+          </div>
+        </div>
       </div>
-      {isLoading || !products ? (
+      {isLoading || !data?.products ? (
         <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-20 p-10 ">
           <ProductCardLoading />
           <ProductCardLoading />
@@ -89,16 +142,42 @@ const Shop: NextPage = () => {
           <ProductCardLoading />
         </div>
       ) : (
-        <ProductList products={products} />
+        <ProductList products={data?.products} />
       )}
 
       <div className="flex justify-center items-center mt-10">
         <div className="join">
-          <button className="join-item btn">1</button>
-          <button className="join-item btn">2</button>
-          <button className="join-item btn btn-disabled">...</button>
-          <button className="join-item btn">99</button>
-          <button className="join-item btn">100</button>
+          {pagination != 1 && (
+            <button
+              className={`join-item btn btn-warning btn-outline ${
+                pagination <= 1 && "btn-disabled"
+              }`}
+              onClick={() => setPagination(pagination - 1)}
+            >
+              «
+            </button>
+          )}
+          {isLoading ? (
+            <button className="join-item btn btn-square btn-warning">
+              <span className="loading loading-spinner"></span>
+            </button>
+          ) : (
+            <button className="join-item btn btn-warning">
+              Page {pagination} of{" "}
+              {Math.ceil(data?.productsNumber / Number(show))}
+            </button>
+          )}
+          {pagination != Math.ceil(data?.productsNumber / Number(show)) && (
+            <button
+              className={`join-item btn btn-warning btn-outline ${
+                pagination >= Math.ceil(data?.productsNumber / Number(show)) &&
+                "btn-disabled"
+              }`}
+              onClick={() => setPagination(pagination + 1)}
+            >
+              »
+            </button>
+          )}
         </div>
       </div>
     </>
