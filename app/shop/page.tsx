@@ -52,8 +52,8 @@ const Shop: NextPage = () => {
           </ul>
         </div>
       </div>
-      <div className="w-full h-28 bg-[#F9F1E7] mb-10 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 p-10">
-        <div className=" flex gap-5 justify-start items-center">
+      <div className="w-full h-auto bg-[#F9F1E7] mb-10 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 p-5 gap-5">
+        <div className=" flex gap-5 justify-center items-center">
           <div className="flex gap-2 justify-start items-center">
             <Image
               src="/icon/filter.png"
@@ -178,6 +178,61 @@ const Shop: NextPage = () => {
               »
             </button>
           )}
+        </div>
+      </div>
+
+      <div className="flex flex-wrap justify-between bg-[#F9F1E7] w-full p-10 gap-10 mt-16">
+        <div className="flex flex-1 justify-center items-center gap-5 min-w-60">
+          <Image
+            src="/icon/trophy 1.png"
+            alt="trophy 1"
+            width={60}
+            height={60}
+            priority
+          />
+          <div>
+            <div className="text-2xl mb-1">High Quality</div>
+            <div className="opacity-50">crafted from top materials</div>
+          </div>
+        </div>
+        <div className="flex flex-1 justify-center items-center gap-5 min-w-60">
+          <Image
+            src="/icon/guarantee.png"
+            alt="guarantee"
+            width={60}
+            height={60}
+            priority
+          />
+          <div>
+            <div className="text-2xl">High Quality</div>
+            <div className="opacity-50">crafted from top materials</div>
+          </div>
+        </div>
+        <div className="flex flex-1 justify-center items-center gap-5 min-w-60">
+          <Image
+            src="/icon/shipping.png"
+            alt="shipping"
+            width={60}
+            height={60}
+            priority
+          />
+          <div>
+            <div className="text-2xl">High Quality</div>
+            <div className="opacity-50">crafted from top materials</div>
+          </div>
+        </div>
+        <div className="flex flex-1 justify-center items-center gap-5 min-w-60">
+          <Image
+            src="/icon/customer-support.png"
+            alt="customer-support"
+            width={60}
+            height={60}
+            priority
+          />
+          <div>
+            <div className="text-2xl">High Quality</div>
+            <div className="opacity-50">crafted from top materials</div>
+          </div>
         </div>
       </div>
     </>

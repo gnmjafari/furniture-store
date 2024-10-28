@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="navbar fixed z-50 bg-white">
+    <div className="navbar  fixed z-50 bg-white">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,7 +31,7 @@ const Navbar = () => {
             {menuItem.map((item, key) => {
               return (
                 <li key={key}>
-                  <Link href={`/${item !== "home" && item.toString()}`}>
+                  <Link href={`/${item !== "home" ? item.toString() : ""}`}>
                     {item.toUpperCase()}
                   </Link>
                 </li>
@@ -51,7 +51,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 gap-5">
           {menuItem.map((item, key) => {
             return (
               <li key={key} className="font-bold">
@@ -63,7 +63,7 @@ const Navbar = () => {
           })}
         </ul>
       </div>
-      <div className="navbar-end mr-10 gap-10">
+      <div className="navbar-end mr-10 gap-10 hidden lg:flex">
         <a className="cursor-pointer">
           <Image
             src="/icon/account.png"

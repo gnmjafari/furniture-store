@@ -98,7 +98,7 @@ export default function Home() {
         )}
       </div>
 
-      <div className="flex flex-col mt-10 justify-center items-center gap-10">
+      <div className="flex flex-col mt-10 justify-center items-center gap-10 mb-10">
         <div className="flex flex-col gap-2 items-center justify-center">
           <div className="font-medium text-lg">Share your setup with</div>
           <div className="font-extrabold text-2xl">#FuniroFurniture</div>

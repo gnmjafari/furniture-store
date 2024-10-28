@@ -4,7 +4,7 @@ import { menuItem } from "./data";
 const Footer = () => {
   return (
     <>
-      <footer className="footer bg-white border-t-2 text-base-content p-10 mt-10">
+      <footer className="footer bg-white border-t-2 text-base-content p-10">
         <nav>
           <h6 className="footer-title text-black">Funiro.</h6>
           <p className="link link-hover">
