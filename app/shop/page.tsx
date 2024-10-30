@@ -109,7 +109,21 @@ const Shop: NextPage = () => {
             </button>
           </div>
           <div className="divider lg:divider-horizontal" />
-          <div>Showing 1–16 of products results</div>
+          {data && (
+            <div>
+              Showing{" "}
+              <span className="mx-1">
+                {pagination == 1 ? "1" : Number(show) * Number(pagination - 1)}
+              </span>
+              -
+              <span className="mx-1">
+                {Number(show) * Number(pagination) > data.productsNumber
+                  ? data.productsNumber
+                  : Number(show) * Number(pagination)}
+              </span>
+              of products results
+            </div>
+          )}
         </div>
         <div className="flex justify-center items-center gap-10">
           <div className="flex justify-start items-center gap-3 ">

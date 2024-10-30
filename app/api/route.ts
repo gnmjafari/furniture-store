@@ -11,10 +11,6 @@ export function GET(request: NextRequest) {
   const show = searchParams.get("show");
   const shortBy = searchParams.get("shortBy");
 
-  console.log("page", page);
-  console.log("show", show);
-  console.log("shortBy", shortBy);
-
   if (shortBy == "Lowest price") {
     productsCopy = _.sortBy(productsCopy, (item) =>
       item.discount
