@@ -69,7 +69,7 @@ export default function Home() {
             <ProductCardLoading />
           </div>
         ) : (
-          <ProductList products={data?.products} />
+          <ProductList products={data?.products} howDisplay="group" />
         )}
         <button className="btn btn-outline btn-warning mt-5">Show More</button>
       </div>
