@@ -5,6 +5,7 @@ import Slider from "@/components/Slider";
 import { fetcher } from "@/components/utils";
 import { Product } from "@/types/types";
 import Image from "next/image";
+import Link from "next/link";
 import useSWR from "swr";
 
 export default function Home() {
@@ -69,9 +70,14 @@ export default function Home() {
             <ProductCardLoading />
           </div>
         ) : (
-          <ProductList products={data?.products} />
+          <ProductList
+            products={data?.products.slice(0, 8)}
+            howDisplay="group"
+          />
         )}
-        <button className="btn btn-outline btn-warning mt-5">Show More</button>
+        <button className="btn btn-outline btn-warning mt-5">
+          <Link href="/shop">Show More</Link>
+        </button>
       </div>
 
       <div className="card p-5 bg-[#FCF8F3] w-full shadow-xl items-center justify-center flex-row flex-wrap">
