@@ -1,10 +1,6 @@
-# Next.js 15 Project with TypeScript, Tailwind CSS, and DaisyUI
-
-This project is a simple web application built with [Next.js 15](https://nextjs.org/) along with [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/), and [DaisyUI](https://daisyui.com/). The goal of this project is to provide a starter template for developing modern, responsive websites using the latest features of Next.js.
-
 ## Furniture store based on [Figma](https://www.figma.com/design/2hehowUjuV8cspZeIhFnlz/eCommerce-Website-%7C-Web-Page-Design-%7C-UI-KIT-%7C-Interior-Landing-Page-(Community)?node-id=117-336&node-type=frame&t=NOsePgs0s6q3t90U-0) and [Live demo](https://furniture-store-theta-two.vercel.app/)
 
- 
+This project is a simple web application built with [Next.js 15](https://nextjs.org/) along with [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/), and [DaisyUI](https://daisyui.com/). The goal of this project is to provide a starter template for developing modern, responsive websites using the latest features of Next.js.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
