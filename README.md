@@ -2,8 +2,6 @@
 
 This project is a simple web application built with [Next.js 15](https://nextjs.org/) along with [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/), and [DaisyUI](https://daisyui.com/). The goal of this project is to provide a starter template for developing modern, responsive websites using the latest features of Next.js.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
