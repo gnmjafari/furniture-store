@@ -14,7 +14,7 @@ const Shop: NextPage = () => {
   const [pagination, setPagination] = useState<number>(1);
   const [show, setShow] = useState<string>("8");
   const [shortBy, setShortBy] = useState<string>("New");
-  const [howDisplay, setHowDisplay] = useState<string>("group");
+  const [howDisplay, setHowDisplay] = useState<"group" | "single">("group");
 
   const { data, isLoading } = useSWR(
     `/api/?page=${pagination}&show=${show}&shortBy=${shortBy}`,
@@ -70,12 +70,12 @@ const Shop: NextPage = () => {
           </div>
           <div className="flex gap-1 justify-start items-center">
             <button
+              onClick={() => setHowDisplay("group")}
               className={`btn btn-ghost ${
-                howDisplay == "Group" && "btn-active"
+                howDisplay == "group" && "btn-active"
               }`}
             >
               <Image
-                onClick={() => setHowDisplay("Group")}
                 src="/icon/ci_grid-big-round.png"
                 alt="ci_grid-big-round"
                 width={20}
@@ -88,9 +88,13 @@ const Shop: NextPage = () => {
                 }}
               />
             </button>
-            <button className="btn btn-ghost">
+            <button
+              onClick={() => setHowDisplay("single")}
+              className={`btn btn-ghost ${
+                howDisplay == "single" && "btn-active"
+              }`}
+            >
               <Image
-                onClick={() => setHowDisplay("Single")}
                 src="/icon/bi_view-list.png"
                 alt="bi_view-list"
                 className="cursor-pointer"
@@ -142,7 +146,7 @@ const Shop: NextPage = () => {
           <ProductCardLoading />
         </div>
       ) : (
-        <ProductList products={data?.products} />
+        <ProductList products={data?.products} howDisplay={howDisplay} />
       )}
 
       <div className="flex justify-center items-center mt-10">
