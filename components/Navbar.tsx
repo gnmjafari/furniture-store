@@ -1,9 +1,14 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { menuItem } from "./data";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
+  console.log("pathname", pathname);
+
   return (
     <div className="navbar  fixed z-50 bg-white">
       <div className="navbar-start">
@@ -31,7 +36,15 @@ const Navbar = () => {
             {menuItem.map((item, key) => {
               return (
                 <li key={key}>
-                  <Link href={`/${item !== "home" ? item.toString() : ""}`}>
+                  <Link
+                    className={`${
+                      `/${item}` === pathname ||
+                      (item == "home" && pathname == "/")
+                        ? "active"
+                        : ""
+                    }`}
+                    href={`/${item !== "home" ? item.toString() : ""}`}
+                  >
                     {item.toUpperCase()}
                   </Link>
                 </li>
@@ -55,7 +68,15 @@ const Navbar = () => {
           {menuItem.map((item, key) => {
             return (
               <li key={key} className="font-bold">
-                <Link href={`/${item !== "home" ? item.toString() : ""}`}>
+                <Link
+                  className={`${
+                    `/${item}` === pathname ||
+                    (item == "home" && pathname == "/")
+                      ? "active"
+                      : ""
+                  }`}
+                  href={`/${item !== "home" ? item.toString() : ""}`}
+                >
                   {item.toUpperCase()}
                 </Link>
               </li>
