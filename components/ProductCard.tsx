@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { Product } from "../types/types";
 import Image from "next/image";
+import { calculateDiscountedPrice } from "./utils";
 
 type ProductCardProps = {
   item: Product;
@@ -12,15 +13,6 @@ const ProductCard: FunctionComponent<ProductCardProps> = ({
   howDisplay,
 }) => {
   const formattedPrice = item.price.toLocaleString("en");
-
-  const calculateDiscountedPrice = (
-    price: number,
-    discountPercentage: number
-  ) => {
-    const discountAmount = (price * discountPercentage) / 100;
-    const finalPrice = price - discountAmount;
-    return finalPrice.toLocaleString("en");
-  };
 
   if (howDisplay == "single") {
     return (
