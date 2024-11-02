@@ -1,12 +1,15 @@
 "use client";
+import ProductList from "@/components/ProductList";
 import { fetcher } from "@/components/utils";
 import { Product as ProductType } from "@/types/types";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import useSWR from "swr";
 
 interface ProductData {
   product: ProductType;
+  relatedProducts: ProductType[];
 }
 
 export default function Product({
@@ -240,8 +243,9 @@ export default function Product({
             </div>
           </div>
         </div>
+
         <div className="divider" />
-       
+
         <div
           role="tablist"
           className="tabs tabs-lifted tabs-bordered  grid-cols-3  px-16 mt-10"
@@ -256,7 +260,7 @@ export default function Product({
           />
           <div
             role="tabpanel"
-            className="tab-content min-w-fit p-10 px-10 sm:px-16 opacity-75"
+            className="tab-content min-w-fit p-10 px-10 sm:px-16 text-justify"
           >
             {data.product.moreDetails}
             <div className="grid grid-cols-1 sm:grid-cols-2  gap-10 mt-10">
@@ -288,7 +292,7 @@ export default function Product({
           />
           <div
             role="tabpanel"
-            className="tab-content p-10 px-10 sm:px-16 opacity-75"
+            className="tab-content p-10 px-10 sm:px-16 text-justify"
           >
             {data.product.moreDetails}
           </div>
@@ -298,14 +302,62 @@ export default function Product({
             name="my_tabs_1"
             role="tab"
             className="tab"
-            aria-label="Reviews [5]"
+            aria-label="Reviews [3]"
           />
-          <div
-            role="tabpanel"
-            className="tab-content p-10 px-10 sm:px-16 opacity-75"
-          >
-            {data.product.moreDetails}
+          <div role="tabpanel" className="tab-content p-10 px-10 sm:px-16">
+            <div className="chat chat-start">
+              <div className="chat-image avatar">
+                <div className="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS chat bubble component"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
+                </div>
+              </div>
+              <div className="chat-bubble bg-transparent shadow-md text-black">
+                It was said that you would, destroy the Sith, not join them.
+              </div>
+            </div>
+            <div className="chat chat-start">
+              <div className="chat-image avatar">
+                <div className="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS chat bubble component"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
+                </div>
+              </div>
+              <div className="chat-bubble bg-transparent shadow-md text-black">
+                It was you who would bring balance to the Force
+              </div>
+            </div>
+            <div className="chat chat-start">
+              <div className="chat-image avatar">
+                <div className="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS chat bubble component"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
+                </div>
+              </div>
+              <div className="chat-bubble bg-transparent shadow-md text-black">
+                Not leave it in Darkness
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div className="divider" />
+
+        <div className="flex justify-center items-center flex-col mb-16">
+          <div className="text-3xl mb-7">Related Products</div>
+          <ProductList
+            products={data?.relatedProducts.slice(0, 4)}
+            howDisplay="group"
+          />
+          <button className="btn btn-outline btn-warning mt-10">
+            <Link href="/shop">Show More</Link>
+          </button>
         </div>
       </>
     );
