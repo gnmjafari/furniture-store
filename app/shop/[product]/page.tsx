@@ -1,12 +1,12 @@
 "use client";
 import { fetcher } from "@/components/utils";
-import { Product } from "@/types/types";
+import { Product as ProductType } from "@/types/types";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import useSWR from "swr";
 
 interface ProductData {
-  product: Product;
+  product: ProductType;
 }
 
 export default function Product({
