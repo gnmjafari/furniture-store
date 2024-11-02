@@ -45,7 +45,7 @@ const ProductCard: FunctionComponent<ProductCardProps> = ({
             </figure>
             <div className="card-body">
               <h2 className="card-title">{item.name}</h2>
-              <p>{item.description}</p>
+              <p>{item.category}</p>
 
               <div className="card-actions justify-end">
                 <p className="font-bold text-md">
@@ -127,7 +127,7 @@ const ProductCard: FunctionComponent<ProductCardProps> = ({
             </figure>
             <div className="card-body">
               <h2 className="card-title">{item.name}</h2>
-              <p>{item.description}</p>
+              <p>{item.category}</p>
               <div className="flex justify-between items-center">
                 <p className="font-bold text-md">
                   Rp{" "}
