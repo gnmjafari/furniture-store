@@ -9,3 +9,12 @@ export const fetcher = async (
   }
   return res.json();
 };
+
+export const calculateDiscountedPrice = (
+  price: number,
+  discountPercentage: number
+) => {
+  const discountAmount = (price * discountPercentage) / 100;
+  const finalPrice = price - discountAmount;
+  return finalPrice.toLocaleString("en");
+};
