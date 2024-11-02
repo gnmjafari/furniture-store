@@ -240,6 +240,73 @@ export default function Product({
             </div>
           </div>
         </div>
+        <div className="divider" />
+       
+        <div
+          role="tablist"
+          className="tabs tabs-lifted tabs-bordered  grid-cols-3  px-16 mt-10"
+        >
+          <input
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            className="tab flex-1"
+            aria-label="Description"
+            defaultChecked
+          />
+          <div
+            role="tabpanel"
+            className="tab-content min-w-fit p-10 px-10 sm:px-16 opacity-75"
+          >
+            {data.product.moreDetails}
+            <div className="grid grid-cols-1 sm:grid-cols-2  gap-10 mt-10">
+              <div className="relative h-60 md:h-[348px]   rounded-lg overflow-hidden">
+                <Image
+                  className="object-cover"
+                  src={data.product.image}
+                  alt={data.product.name}
+                  fill
+                />
+              </div>
+              <div className="relative  h-60 md:h-[348px]   rounded-lg overflow-hidden">
+                <Image
+                  className="object-cover"
+                  src={data.product.image}
+                  alt={data.product.name}
+                  fill
+                />
+              </div>
+            </div>
+          </div>
+
+          <input
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            className="tab"
+            aria-label="Additional Information"
+          />
+          <div
+            role="tabpanel"
+            className="tab-content p-10 px-10 sm:px-16 opacity-75"
+          >
+            {data.product.moreDetails}
+          </div>
+
+          <input
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            className="tab"
+            aria-label="Reviews [5]"
+          />
+          <div
+            role="tabpanel"
+            className="tab-content p-10 px-10 sm:px-16 opacity-75"
+          >
+            {data.product.moreDetails}
+          </div>
+        </div>
       </>
     );
   }
