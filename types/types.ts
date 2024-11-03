@@ -11,3 +11,8 @@ export type Product = {
   category: string;
   moreDetails: string;
 };
+
+export type ShoppingCart = {
+  productId: number;
+  quantity: number;
+};

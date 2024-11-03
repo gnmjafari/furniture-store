@@ -1,8 +1,9 @@
 import React, { FunctionComponent } from "react";
 import { Product } from "../types/types";
 import Image from "next/image";
-import { calculateDiscountedPrice } from "./utils";
+import { calculateDiscountedPrice, handleShoppingCart } from "./utils";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
 
 type ProductCardProps = {
   item: Product;
@@ -18,166 +19,173 @@ const ProductCard: FunctionComponent<ProductCardProps> = ({
   if (howDisplay == "single") {
     return (
       <div className="indicator w-3/4 md:w-3/4 lg:w-3/4">
-        {item.discount ? (
+        {item.discount && (
           <span className="indicator-item badge badge-error">
             {item.discountPercentage}%
           </span>
-        ) : (
-          item.new && (
-            <span className="indicator-item badge badge-accent">New</span>
-          )
         )}
-        <Link
-          className="tooltip tooltip-warning text-left w-full"
-          data-tip="Click to view more product information"
-          href={`/shop/${item.id}`}
-        >
-          <div className="card sm:card-side  bg-base-100 w-full shadow-xl group/product overflow-hidden">
-            <figure>
-              <div className="relative max-w-[285px] max-h-[301px] min-w-[285px] min-h-[301px] ">
-                <Image
-                  className="object-cover"
-                  src={item.image}
-                  alt={item.name}
-                  layout="fill"
-                />
-              </div>
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">{item.name}</h2>
-              <p>{item.category}</p>
+        {item.new && (
+          <span className="indicator-item indicator-start badge badge-accent">
+            New
+          </span>
+        )}
 
-              <div className="card-actions justify-end">
-                <p className="font-bold text-md">
-                  Rp{" "}
-                  {calculateDiscountedPrice(
-                    item.price,
-                    item.discountPercentage
-                  )}
-                </p>
-              </div>
+        <div className="card sm:card-side  bg-base-100 w-full shadow-xl group/product overflow-hidden">
+          <figure>
+            <div className="relative max-w-[285px] max-h-[301px] min-w-[285px] min-h-[301px] ">
+              <Image
+                className="object-cover"
+                src={item.image}
+                alt={item.name}
+                layout="fill"
+              />
             </div>
-            <div className="absolute invisible p-2 flex-col gap-3  group-hover/product:visible left-0 top-0 bottom-0 right-0  bg-[#3a3a3ab2] flex justify-center items-center">
-              <button className="btn  btn-outline btn-warning">
-                Add to cart
-              </button>
-              <div className="flex items-center justify-between gap-1">
-                <button className="btn btn-xs text-white btn-ghost gap-1">
-                  <Image
-                    src="/icon/share.png"
-                    alt="share"
-                    width={10}
-                    height={10}
-                  />
-                  Share
-                </button>
-                <button className="btn btn-xs text-white btn-ghost gap-1">
-                  <Image
-                    src="/icon/Compare.png"
-                    alt="Compare"
-                    width={12}
-                    height={12}
-                  />
-                  Compare
-                </button>{" "}
-                <button className="btn btn-xs text-white btn-ghost gap-1">
-                  <Image
-                    src="/icon/Heart.png"
-                    alt="Heart"
-                    width={12}
-                    height={12}
-                  />
-                  Like
-                </button>
-              </div>
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">{item.name}</h2>
+            <p>{item.category}</p>
+
+            <div className="card-actions justify-end">
+              <p className="font-bold text-md">
+                Rp{" "}
+                {calculateDiscountedPrice(item.price, item.discountPercentage)}
+              </p>
             </div>
           </div>
+          <div className="absolute invisible p-2 flex-col gap-3  group-hover/product:visible left-0 top-0 bottom-0 right-0  bg-[#3a3a3ab2] flex justify-center items-center">
+            <button
+              onClick={() => {
+                handleShoppingCart(item.id, "Increase");
+              }}
+              className="btn  btn-outline btn-warning"
+            >
+              Add to cart
+            </button>
+            <div className="flex items-center justify-between gap-1">
+              <button className="btn btn-xs text-white btn-ghost gap-1">
+                <Image
+                  src="/icon/share.png"
+                  alt="share"
+                  width={10}
+                  height={10}
+                />
+                Share
+              </button>
+              <button className="btn btn-xs text-white btn-ghost gap-1">
+                <Image
+                  src="/icon/Compare.png"
+                  alt="Compare"
+                  width={12}
+                  height={12}
+                />
+                Compare
+              </button>{" "}
+              <button className="btn btn-xs text-white btn-ghost gap-1">
+                <Image
+                  src="/icon/Heart.png"
+                  alt="Heart"
+                  width={12}
+                  height={12}
+                />
+                Like
+              </button>
+            </div>
+          </div>
+        </div>
+        <Link href={`/shop/${item.id}`}>
+          <span className="rotate-90 hover:rotate-0 hover:scale-125 indicator-item indicator-middle indicator-end badge badge-warning badge-md">
+            <FaArrowRight />
+          </span>
         </Link>
       </div>
     );
   } else if (howDisplay == "group") {
     return (
       <div className="indicator ">
-        {item.discount ? (
+        {item.discount && (
           <span className="indicator-item badge badge-error">
             {item.discountPercentage}%
           </span>
-        ) : (
-          item.new && (
-            <span className="indicator-item badge badge-accent">New</span>
-          )
         )}
-        <Link
-          className="tooltip tooltip-warning text-left w-full"
-          data-tip="Click to view more product information"
-          href={`/shop/${item.id}`}
-        >
-          <div className="card relative cursor-pointer card-compact w-64 shadow-xl group/product overflow-hidden">
-            <figure>
-              <div className="relative max-w-[285px] max-h-[301px] min-w-[285px] min-h-[301px] ">
-                <Image
-                  className="object-cover"
-                  src={item.image}
-                  alt={item.name}
-                  layout="fill"
-                  // width={285}
-                  // height={301}
-                />
-              </div>
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">{item.name}</h2>
-              <p>{item.category}</p>
-              <div className="flex justify-between items-center">
-                <p className="font-bold text-md">
-                  Rp{" "}
-                  {calculateDiscountedPrice(
-                    item.price,
-                    item.discountPercentage
-                  )}
-                </p>
-                {item.discount && (
-                  <p className="font-bold text-md line-through text-gray-500">
-                    Rp {formattedPrice}
-                  </p>
-                )}
-              </div>
+        {item.new && (
+          <span className="indicator-item indicator-start badge badge-accent">
+            New
+          </span>
+        )}
+
+        <div className="card relative  cursor-pointer card-compact w-64 shadow-xl group/product overflow-hidden">
+          <figure>
+            <div className="relative max-w-[285px] max-h-[301px] min-w-[285px] min-h-[301px] ">
+              <Image
+                className="object-cover"
+                src={item.image}
+                alt={item.name}
+                layout="fill"
+                // width={285}
+                // height={301}
+              />
             </div>
-            <div className="absolute invisible p-2 flex-col gap-3  group-hover/product:visible left-0 top-0 bottom-0 right-0  bg-[#3a3a3ab2] flex justify-center items-center">
-              <button className="btn  btn-outline btn-warning">
-                Add to cart
-              </button>
-              <div className="flex items-center justify-between gap-1">
-                <button className="btn btn-xs text-white btn-ghost gap-1">
-                  <Image
-                    src="/icon/share.png"
-                    alt="share"
-                    width={10}
-                    height={10}
-                  />
-                  Share
-                </button>
-                <button className="btn btn-xs text-white btn-ghost gap-1">
-                  <Image
-                    src="/icon/Compare.png"
-                    alt="Compare"
-                    width={12}
-                    height={12}
-                  />
-                  Compare
-                </button>{" "}
-                <button className="btn btn-xs text-white btn-ghost gap-1">
-                  <Image
-                    src="/icon/Heart.png"
-                    alt="Heart"
-                    width={12}
-                    height={12}
-                  />
-                  Like
-                </button>
-              </div>
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">{item.name}</h2>
+            <p>{item.category}</p>
+            <div className="flex justify-between items-center">
+              <p className="font-bold text-md">
+                Rp{" "}
+                {calculateDiscountedPrice(item.price, item.discountPercentage)}
+              </p>
+              {item.discount && (
+                <p className="font-bold text-md line-through text-gray-500">
+                  Rp {formattedPrice}
+                </p>
+              )}
             </div>
           </div>
+          <div className="absolute invisible p-2 flex-col gap-3  group-hover/product:visible left-0 top-0 bottom-0 right-0  bg-[#3a3a3ab2] flex justify-center items-center">
+            <button
+              onClick={() => {
+                handleShoppingCart(item.id, "Increase");
+              }}
+              className="btn  btn-outline btn-warning"
+            >
+              Add to cart
+            </button>
+            <div className="flex items-center justify-between gap-1">
+              <button className="btn btn-xs text-white btn-ghost gap-1">
+                <Image
+                  src="/icon/share.png"
+                  alt="share"
+                  width={10}
+                  height={10}
+                />
+                Share
+              </button>
+              <button className="btn btn-xs text-white btn-ghost gap-1">
+                <Image
+                  src="/icon/Compare.png"
+                  alt="Compare"
+                  width={12}
+                  height={12}
+                />
+                Compare
+              </button>{" "}
+              <button className="btn btn-xs text-white btn-ghost gap-1">
+                <Image
+                  src="/icon/Heart.png"
+                  alt="Heart"
+                  width={12}
+                  height={12}
+                />
+                Like
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <Link href={`/shop/${item.id}`}>
+          <span className="rotate-90 hover:rotate-0 hover:scale-125 indicator-item indicator-middle indicator-end badge badge-warning badge-md">
+            <FaArrowRight />
+          </span>
         </Link>
       </div>
     );

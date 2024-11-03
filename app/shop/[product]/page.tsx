@@ -1,6 +1,6 @@
 "use client";
 import ProductList from "@/components/ProductList";
-import { fetcher } from "@/components/utils";
+import { fetcher, handleShoppingCart } from "@/components/utils";
 import { Product as ProductType } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,9 +32,6 @@ export default function Product({
     productId ? `/api/${productId}` : null,
     productId ? fetcher : null
   );
-
-  console.log("isLoading", isLoading);
-  console.log("data", data);
 
   if (!data || isLoading) {
     return (
@@ -216,9 +213,23 @@ export default function Product({
 
             <div className="flex flex-wrap gap-5 mt-4">
               <div className="join">
-                <button className="btn join-item">-</button>
+                <button
+                  onClick={() => {
+                    handleShoppingCart(data.product.id, "Decrease");
+                  }}
+                  className="btn join-item"
+                >
+                  -
+                </button>
                 <button className="btn join-item">1</button>
-                <button className="btn join-item">+</button>
+                <button
+                  onClick={() => {
+                    handleShoppingCart(data.product.id, "Increase");
+                  }}
+                  className="btn join-item"
+                >
+                  +
+                </button>
               </div>
               <button className="btn btn-outline">Add To Cart</button>
               <button className="btn btn-outline">
