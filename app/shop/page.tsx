@@ -21,9 +21,6 @@ const Shop: NextPage = () => {
     fetcher
   );
 
-  console.log("products", data);
-  console.log("isLoading", isLoading);
-
   useEffect(() => {
     if (data?.currentPage) {
       setPagination(Number(data.currentPage));

@@ -4,10 +4,10 @@ import React from "react";
 import { menuItem } from "./data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ShoppingCart from "./ShoppingCart";
 
 const Navbar = () => {
   const pathname = usePathname();
-  console.log("pathname", pathname);
 
   return (
     <div className="navbar  fixed z-50 bg-white">
@@ -115,16 +115,9 @@ const Navbar = () => {
             priority
           />
         </a>
-        <a className="cursor-pointer">
-          <Image
-            src="/icon/Vector.png"
-            alt="Next.js Vector"
-            width={20}
-            height={20}
-            style={{ width: "20px", height: "20px" }}
-            priority
-          />
-        </a>
+
+        <ShoppingCart />
+        
       </div>
     </div>
   );
