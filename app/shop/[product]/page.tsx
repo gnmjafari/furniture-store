@@ -43,10 +43,10 @@ export default function Product({
           <div className="breadcrumbs text-sm mr-3">
             <ul>
               <li className="">
-                <a>Home</a>
+                <Link href={"/"}>Home</Link>
               </li>
               <li className="">
-                <a>Shop</a>
+                <Link href={"/shop"}>Shop</Link>
               </li>
               <li className="text-xl opacity-50">|</li>
             </ul>
@@ -109,10 +109,10 @@ export default function Product({
           <div className="breadcrumbs text-sm mr-3">
             <ul>
               <li className="">
-                <a>Home</a>
+                <Link href={"/"}>Home</Link>
               </li>
               <li className="">
-                <a>Shop</a>
+                <Link href={"/shop"}>Shop</Link>
               </li>
               <li className="text-xl opacity-50">|</li>
             </ul>
