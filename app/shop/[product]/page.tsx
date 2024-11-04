@@ -1,7 +1,12 @@
 "use client";
 import ProductList from "@/components/ProductList";
-import { fetcher, handleShoppingCart } from "@/components/utils";
-import { Product as ProductType } from "@/types/types";
+import {
+  fetcher,
+  getShoppingCart,
+  handleShoppingCart,
+} from "@/components/utils";
+import { Product as ProductType, ShoppingCart } from "@/types/types";
+import _ from "lodash";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -18,6 +23,9 @@ export default function Product({
   params: Promise<{ product: string }>;
 }) {
   const [productId, setProductId] = useState<string | null>(null);
+  const { data: cart } = useSWR<ShoppingCart[] | undefined>("cart", () =>
+    getShoppingCart()
+  );
 
   useEffect(() => {
     const fetchParams = async () => {
@@ -221,7 +229,12 @@ export default function Product({
                 >
                   -
                 </button>
-                <button className="btn join-item">1</button>
+                <button className="btn join-item">
+                  {cart
+                    ? _.find(cart, (item) => item.productId == data.product.id)
+                        ?.quantity || 0
+                    : 0}
+                </button>
                 <button
                   onClick={() => {
                     handleShoppingCart(data.product.id, "Increase");
