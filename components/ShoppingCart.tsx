@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
-import { fetcher, getShoppingCart } from "./utils";
+import { fetcher, getShoppingCart, removeProductFromCart } from "./utils";
 import { ShoppingCart as cartType, Product } from "@/types/types";
 import useSWR, { mutate } from "swr";
 import _ from "lodash";
@@ -92,9 +92,14 @@ const ShoppingCart = () => {
                             <div>{findProduct.name}</div>
                             <div className="flex justify-start items-center gap-5">
                               <span>{item.quantity}</span>
-                              <span className="cursor-pointer">
+                              <button
+                                onClick={() =>
+                                  removeProductFromCart(item.productId)
+                                }
+                                className="cursor-pointer"
+                              >
                                 <MdClose />
-                              </span>
+                              </button>
                               <span className="text-warning flex justify-start items-center gap-2">
                                 <span>Rs.</span>
                                 {findProduct.discount ? (

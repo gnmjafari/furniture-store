@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { ShoppingCart } from "@/types/types";
+import _ from "lodash";
 import { mutate } from "swr";
 
 export const fetcher = async (
@@ -44,6 +45,22 @@ export const handleShoppingCart = (
   } else {
     cart.push({ productId: productId, quantity: 1 });
   }
+
+  cart = _.filter(cart, (item) => item.quantity !== 0);
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  mutate("cart", cart);
+};
+
+export const removeProductFromCart = (productId: number) => {
+  const cartString = localStorage.getItem("cart");
+  let cart: ShoppingCart[] = [];
+
+  if (cartString) {
+    cart = JSON.parse(cartString);
+  }
+
+  cart = _.filter(cart, (item) => item.productId !== productId);
 
   localStorage.setItem("cart", JSON.stringify(cart));
   mutate("cart", cart);
