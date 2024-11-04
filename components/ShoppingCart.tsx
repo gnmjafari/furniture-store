@@ -5,6 +5,7 @@ import { ShoppingCart as cartType, Product } from "@/types/types";
 import useSWR, { mutate } from "swr";
 import _ from "lodash";
 import { MdClose } from "react-icons/md";
+import { IoMdCloseCircleOutline } from "react-icons/io";
 
 const ShoppingCart = () => {
   const { data, isLoading } = useSWR("/api", fetcher);
@@ -78,7 +79,7 @@ const ShoppingCart = () => {
                       return (
                         <div
                           key={key}
-                          className="flex flex-row justify-start items-center gap-5"
+                          className="flex flex-row justify-between items-center gap-5 w-full pr-5"
                         >
                           <div className="relative w-20 h-20 rounded-md overflow-hidden">
                             <Image
@@ -92,14 +93,9 @@ const ShoppingCart = () => {
                             <div>{findProduct.name}</div>
                             <div className="flex justify-start items-center gap-5">
                               <span>{item.quantity}</span>
-                              <button
-                                onClick={() =>
-                                  removeProductFromCart(item.productId)
-                                }
-                                className="cursor-pointer"
-                              >
+                              <span className="cursor-pointer">
                                 <MdClose />
-                              </button>
+                              </span>
                               <span className="text-warning flex justify-start items-center gap-2">
                                 <span>Rs.</span>
                                 {findProduct.discount ? (
@@ -122,6 +118,14 @@ const ShoppingCart = () => {
                               </span>
                             </div>
                           </div>
+                          <button
+                            onClick={() =>
+                              removeProductFromCart(item.productId)
+                            }
+                            className="cursor-pointer"
+                          >
+                            <IoMdCloseCircleOutline size={20} />
+                          </button>
                         </div>
                       );
                     }
