@@ -79,7 +79,7 @@ const ShoppingCart = () => {
                       return (
                         <div
                           key={key}
-                          className="flex flex-row justify-between items-center gap-5 w-full pr-5"
+                          className="flex flex-row justify-start items-center gap-5 w-full "
                         >
                           <div className="relative w-20 h-20 rounded-md overflow-hidden">
                             <Image
@@ -91,7 +91,7 @@ const ShoppingCart = () => {
                           </div>
                           <div className="flex justify-center items-start flex-col gap-3 bg-transparent">
                             <div>{findProduct.name}</div>
-                            <div className="flex justify-start items-center gap-5">
+                            <div className="flex justify-start items-center gap-2">
                               <span>{item.quantity}</span>
                               <span className="cursor-pointer">
                                 <MdClose />
@@ -134,7 +134,7 @@ const ShoppingCart = () => {
             )}
           </div>
 
-          <div className="absolute bottom-5 flex flex-col justify-start items-start gap-5 w-full">
+          <div className="absolute bottom-5 left-5 right-5 flex flex-col justify-start items-start gap-5">
             <div className="divider mb-0" />
             {cart && data && (
               <div className="flex  justify-between items-center gap-10">
