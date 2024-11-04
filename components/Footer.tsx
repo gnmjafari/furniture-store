@@ -1,5 +1,6 @@
 import React from "react";
 import { menuItem } from "./data";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -15,9 +16,13 @@ const Footer = () => {
           <h6 className="footer-title">Links</h6>
           {menuItem.map((item, key) => {
             return (
-              <a key={key} className="link link-hover text-black">
+              <Link
+                href={`/${item != "Home" ? item.toLowerCase() : ""} `}
+                key={key}
+                className="link link-hover text-black"
+              >
                 {item}
-              </a>
+              </Link>
             );
           })}
         </nav>
