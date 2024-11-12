@@ -70,3 +70,36 @@ export const getShoppingCart = (): ShoppingCart[] => {
   const cart = localStorage.getItem("cart");
   return cart ? JSON.parse(cart) : [];
 };
+
+export const handleComparison = (productId: number) => {
+  const getComparison = localStorage.getItem("comparison");
+  let comparison: number[] = [];
+
+  if (getComparison) {
+    comparison = JSON.parse(getComparison);
+  }
+
+  comparison.push(productId);
+  const comparisonUniq = _.uniq(comparison);
+  localStorage.setItem("comparison", JSON.stringify(comparisonUniq));
+  mutate("comparison", comparisonUniq);
+};
+
+export const handleComparisonRemove = (productId: number) => {
+  const getComparison = localStorage.getItem("comparison");
+  let comparison: number[] = [];
+
+  if (getComparison) {
+    comparison = JSON.parse(getComparison);
+  }
+
+  comparison = _.filter(comparison, (item) => item !== productId);
+
+  localStorage.setItem("comparison", JSON.stringify(comparison));
+  mutate("comparison", comparison);
+};
+
+export const getComparison = (): string[] => {
+  const comparison = localStorage.getItem("comparison");
+  return comparison ? JSON.parse(comparison) : [];
+};

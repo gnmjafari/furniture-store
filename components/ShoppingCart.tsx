@@ -6,6 +6,7 @@ import useSWR, { mutate } from "swr";
 import _ from "lodash";
 import { MdClose } from "react-icons/md";
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import Link from "next/link";
 
 const ShoppingCart = () => {
   const { data, isLoading } = useSWR("/api", fetcher);
@@ -149,7 +150,9 @@ const ShoppingCart = () => {
             <div className="flex justify-between items-center gap-5">
               <button className="btn btn-sm btn-outline">Cart</button>
               <button className="btn btn-sm btn-outline">Checkout</button>
-              <button className="btn btn-sm btn-outline">Comparison</button>
+              <Link href="/comparison">
+                <button className="btn btn-sm btn-outline">Comparison</button>
+              </Link>
             </div>
           </div>
         </div>
