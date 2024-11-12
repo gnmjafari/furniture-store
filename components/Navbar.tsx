@@ -85,7 +85,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end mr-10 gap-10 hidden lg:flex">
-        <a className="cursor-pointer">
+        {/* <a className="cursor-pointer">
           <Image
             src="/icon/account.png"
             alt="Next.js account"
@@ -94,8 +94,8 @@ const Navbar = () => {
             style={{ width: "20px", height: "20px" }}
             priority
           />
-        </a>
-        <a className="cursor-pointer">
+        </a> */}
+        {/* <a className="cursor-pointer">
           <Image
             src="/icon/search.png"
             alt="Next.js search"
@@ -104,8 +104,8 @@ const Navbar = () => {
             style={{ width: "20px", height: "20px" }}
             priority
           />
-        </a>
-        <a className="cursor-pointer">
+        </a> */}
+        {/* <a className="cursor-pointer">
           <Image
             src="/icon/favorite.png"
             alt="Next.js favorite"
@@ -114,7 +114,7 @@ const Navbar = () => {
             style={{ width: "20px", height: "20px" }}
             priority
           />
-        </a>
+        </a> */}
 
         <ShoppingCart />
         
