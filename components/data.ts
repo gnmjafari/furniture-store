@@ -15,6 +15,38 @@ export const products: Product[] = [
     category: "sleeping area",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 2,
@@ -30,6 +62,38 @@ export const products: Product[] = [
     category: "tables and chairs",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 3,
@@ -45,6 +109,38 @@ export const products: Product[] = [
     category: "sleeping area",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 4,
@@ -60,6 +156,39 @@ export const products: Product[] = [
     category: "tables and chairs",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 5,
@@ -75,6 +204,39 @@ export const products: Product[] = [
     category: "tables and chairs",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 6,
@@ -90,6 +252,39 @@ export const products: Product[] = [
     category: "sleeping area",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 7,
@@ -105,6 +300,39 @@ export const products: Product[] = [
     category: "sleeping area",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 8,
@@ -120,6 +348,39 @@ export const products: Product[] = [
     category: "sleeping area",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 9,
@@ -135,6 +396,39 @@ export const products: Product[] = [
     category: "room",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 10,
@@ -150,6 +444,39 @@ export const products: Product[] = [
     category: "room",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 11,
@@ -165,6 +492,39 @@ export const products: Product[] = [
     category: "room",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 12,
@@ -180,6 +540,39 @@ export const products: Product[] = [
     category: "room",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 13,
@@ -195,6 +588,39 @@ export const products: Product[] = [
     category: "sleeping area",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 14,
@@ -210,6 +636,39 @@ export const products: Product[] = [
     category: "sofas and armchairs",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 16,
@@ -225,6 +684,39 @@ export const products: Product[] = [
     category: "sleeping area",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 17,
@@ -240,6 +732,39 @@ export const products: Product[] = [
     category: "tables and chairs",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 18,
@@ -255,6 +780,39 @@ export const products: Product[] = [
     category: "sofas and armchairs",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
 
   {
@@ -271,6 +829,39 @@ export const products: Product[] = [
     category: "tables and chairs",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 20,
@@ -286,6 +877,39 @@ export const products: Product[] = [
     category: "tables and chairs",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 21,
@@ -301,6 +925,39 @@ export const products: Product[] = [
     category: "sofas and armchairs",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 22,
@@ -316,6 +973,39 @@ export const products: Product[] = [
     category: "tables and chairs",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
   {
     id: 23,
@@ -331,6 +1021,39 @@ export const products: Product[] = [
     category: "sofas and armchairs",
     moreDetails:
       "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+
+    general: {
+      sales_package: "1 sectional sofa",
+      model_number: "TFCBLIGRBL6SRHS",
+      secondary_material: "Solid Wood",
+      configuration: "L-shaped",
+      upholstery_material: "Fabric + Cotton",
+      upholstery_color: "Bright Grey & Lion",
+    },
+    product: {
+      filling_material: "Foam",
+      finish_type: "Bright Grey & Lion",
+      adjustable_headrest: "No",
+      maximum_load_capacity: "280 KG",
+      origin_of_manufacture: "India",
+    },
+    dimensions: {
+      width: "265.32 cm",
+      height: "76 cm",
+      depth: "167.76 cm",
+      weight: "45 KG",
+      seat_height: "41.52 cm",
+      leg_height: "5.46 cm",
+    },
+    warranty: {
+      warranty_summary: "1 Year Manufacturing Warranty",
+      warranty_service_type:
+        "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com",
+      covered_in_warranty: "Warranty Against Manufacturing Defect",
+      not_covered_in_warranty:
+        "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
+      domestic_warranty: "1 Year",
+    },
   },
 ];
 

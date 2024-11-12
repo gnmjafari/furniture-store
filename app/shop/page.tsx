@@ -28,7 +28,7 @@ const Shop: NextPage = () => {
   }, [data]);
 
   return (
-    <>
+    <React.Fragment>
       <div
         className="w-full pt-10 h-80 flex flex-col justify-center items-center "
         style={{
@@ -250,7 +250,7 @@ const Shop: NextPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

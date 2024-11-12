@@ -1,7 +1,11 @@
 import React, { FunctionComponent } from "react";
 import { Product } from "../types/types";
 import Image from "next/image";
-import { calculateDiscountedPrice, handleShoppingCart } from "./utils";
+import {
+  calculateDiscountedPrice,
+  handleComparison,
+  handleShoppingCart,
+} from "./utils";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -71,7 +75,12 @@ const ProductCard: FunctionComponent<ProductCardProps> = ({
                 />
                 Share
               </button>
-              <button className="btn btn-xs text-white btn-ghost gap-1">
+              <button
+                onClick={() => {
+                  handleComparison(item.id);
+                }}
+                className="btn btn-xs text-white btn-ghost gap-1"
+              >
                 <Image
                   src="/icon/Compare.png"
                   alt="Compare"
@@ -160,7 +169,12 @@ const ProductCard: FunctionComponent<ProductCardProps> = ({
                 />
                 Share
               </button>
-              <button className="btn btn-xs text-white btn-ghost gap-1">
+              <button
+                onClick={() => {
+                  handleComparison(item.id);
+                }}
+                className="btn btn-xs text-white btn-ghost gap-1"
+              >
                 <Image
                   src="/icon/Compare.png"
                   alt="Compare"

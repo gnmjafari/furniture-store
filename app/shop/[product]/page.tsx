@@ -1,6 +1,7 @@
 "use client";
 import ProductList from "@/components/ProductList";
 import {
+  calculateDiscountedPrice,
   fetcher,
   getShoppingCart,
   handleShoppingCart,
@@ -164,7 +165,25 @@ export default function Product({
 
           <div className="flex flex-col gap-2">
             <div className="text-4xl">{data.product.name}</div>
-            <div className="text-md opacity-70">Rs. {formattedPrice}</div>
+            <div className="text-md opacity-70">
+              {data.product.discount ? (
+                <>
+                  <span>Rs.</span>
+                  <span className="mx-1 line-through">{formattedPrice}</span>
+                  <span className="mx-1">
+                    {calculateDiscountedPrice(
+                      data.product.price,
+                      data.product.discountPercentage
+                    )}
+                  </span>
+                </>
+              ) : (
+                <>
+                  <span>Rs.</span>
+                  <span className="mx-1">{formattedPrice}</span>
+                </>
+              )}
+            </div>
             <div className="rating rating-xs">
               <input
                 type="radio"
